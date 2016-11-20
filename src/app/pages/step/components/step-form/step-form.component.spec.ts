@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { AddStepComponent } from './add-step.component';
+import { StepFormComponent } from './step-form.component';
 
-describe('AddStepComponent', () => {
-  let component: AddStepComponent;
-  let fixture: ComponentFixture<AddStepComponent>;
+describe('StepFormComponent', () => {
+  let component: StepFormComponent;
+  let fixture: ComponentFixture<StepFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddStepComponent ]
+      declarations: [ StepFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddStepComponent);
+    fixture = TestBed.createComponent(StepFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

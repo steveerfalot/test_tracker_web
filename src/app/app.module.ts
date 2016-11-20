@@ -6,28 +6,23 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 // App
 import { AppComponent } from "./app.component";
-import { LandingComponent } from "./components/landing/landing.component";
 import { ROUTES } from './app.component.routes';
-import { StepComponent } from "./components/step/step.component";
-import { StepService } from "./services/step.service";
-import { AddStepComponent } from './add-step/add-step.component';
+import { StepModule } from "./pages/step/step.module";
+import { LandingModule } from "./pages/landing/landing.module";
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LandingComponent,
-    StepComponent,
-    AddStepComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES)
+    LandingModule,
+    RouterModule.forRoot(ROUTES),
+    StepModule
   ],
-  providers: [
-    StepService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

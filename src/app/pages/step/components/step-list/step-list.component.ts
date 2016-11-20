@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { StepService } from "../../services/step.service";
+import { StepService } from "../../services/step-service/step.service";
 
 @Component({
-  selector: 'app-step',
-  templateUrl: './step.component.html',
-  styleUrls: ['./step.component.sass']
+  selector: 'step-list',
+  templateUrl: './step-list.component.html',
+  styleUrls: ['./step-list.component.sass']
 })
-export class StepComponent implements OnInit {
+export class StepListComponent implements OnInit {
   stepService:StepService;
   steps:any[];
 
