@@ -3,7 +3,7 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { StepService } from './step.service';
 
-describe('Service: Step', () => {
+describe('Service: StepComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [StepService]

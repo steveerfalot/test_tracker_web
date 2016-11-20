@@ -1,8 +1,10 @@
 import { Routes } from "@angular/router";
-import { Step } from "./components/step/step.component";
-import { Landing } from "./components/landing/landing.component";
+import { StepComponent } from "./components/step/step.component";
+import { LandingComponent } from "./components/landing/landing.component";
+import { AddStepComponent } from "./add-step/add-step.component";
 
 export const ROUTES:Routes = [
-  { path: '', component: Landing },
-  { path: 'steps', component: Step }
+  { path: '', component: LandingComponent },
+  { path: 'step', component: StepComponent },
+  { path: 'step/add', component: AddStepComponent }
 ];

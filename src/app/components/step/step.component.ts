@@ -6,7 +6,7 @@ import { StepService } from "../../services/step.service";
   templateUrl: './step.component.html',
   styleUrls: ['./step.component.sass']
 })
-export class Step implements OnInit {
+export class StepComponent implements OnInit {
   stepService:StepService;
   steps:any[];
 
@@ -15,11 +15,9 @@ export class Step implements OnInit {
   }
 
   ngOnInit() {
-    this.stepService.fetchSteps().then((response:any) => {
+    this.stepService.fetchSteps().subscribe((response:any) => {
       this.steps = response;
-      console.log('steps', this.steps);
     });
-
   }
 
 }

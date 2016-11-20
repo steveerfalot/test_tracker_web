@@ -1,3 +1,11 @@
-<div *ngFor="let step of steps">
-  {{ step }}
+<div class="offset-xs-1 col-xs-11">
+  <nav>
+    <button class="btn-small">Add</button>
+  </nav>
+  <div class="header">
+    Steps
+  </div>
+  <div *ngFor="let step of steps">
+      {{ step.step }}
+  </div>
 </div>
