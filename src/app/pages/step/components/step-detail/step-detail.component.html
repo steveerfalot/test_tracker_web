@@ -1,0 +1,26 @@
+<div *ngIf="!loading" class="col-xs-6">
+  <table class="table table-striped table-bordered">
+    <thead>
+    <th class="text-center">Field</th>
+    <th class="text-center">Value</th>
+    </thead>
+    <tbody>
+    <tr>
+      <td class="text-center">
+        <span class="label label-default">Id:</span>
+      </td>
+      <td class="text-center">
+        {{ step.id }}
+      </td>
+    </tr>
+    <tr>
+      <td class="text-center">
+        <span class="label label-default">Step:</span>
+      </td>
+      <td class="text-center">
+        {{ step.step }}
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -12,8 +12,8 @@ export class StepService {
     this.http = http;
   }
 
-  fetchOne(id:number):Observable<Step> {
-    return this.http.get(`/api/step/${id}`).map(response => response.json());
+  fetchOne(params:any):Observable<Step> {
+    return this.http.get(`/api/step/${params.id}`).map(response => response.json());
   }
 
   fetchSteps():Observable<Response> {

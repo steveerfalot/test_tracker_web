@@ -23,7 +23,7 @@ export class StepDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.stepService.fetchOne(params.id).subscribe(step => {
+      this.stepService.fetchOne(params).subscribe(step => {
         this.step = step;
         this.loading = false;
       });
