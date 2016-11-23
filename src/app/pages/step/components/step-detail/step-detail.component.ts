@@ -2,8 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 // App
-import { Step } from "../../../model/step";
-import { StepService } from "../../../services/step-service/step.service";
+import { Step } from "./../../model/step";
+import { StepService } from "./../../services/step-service/step.service";
 
 @Component({
   selector: 'app-step-detail',

@@ -1,5 +1,16 @@
-<div class="offset-xs-1 col-xs-11">
-  <div *ngFor="let step of steps">
-      <a class="link" (click)="view(step.id)">{{ step.step }}</a>
+<div class="col-xs-12">
+  <div class="table-responsive">
+    <table class="table table-striped table-hover table-condensed">
+      <thead>
+      <th>Id</th>
+      <th>Step</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let step of steps" (click)="view(step.id)">
+        <td>{{ step.id }}</td>
+        <td>{{ step.step }}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
