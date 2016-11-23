@@ -8,6 +8,7 @@ import { StepPage } from './step.page';
 import { StepListComponent } from "./components/step-list/step-list.component";
 import { StepFormComponent } from './components/step-form/step-form.component';
 import { StepService } from "./services/step-service/step.service";
+import { StepDetailComponent } from './components/step-detail/step-detail/step-detail.component';
 
 const STEP_ROUTES:Routes = [
   {
@@ -15,7 +16,8 @@ const STEP_ROUTES:Routes = [
     component: StepPage,
     children: [
       { path: '', component: StepListComponent },
-      { path: 'form/?:id', component: StepFormComponent }
+      { path: 'form', component: StepFormComponent },
+      { path: ':id', component: StepDetailComponent }
     ]
   }
 ];
@@ -24,7 +26,8 @@ const STEP_ROUTES:Routes = [
   declarations: [
     StepListComponent,
     StepFormComponent,
-    StepPage
+    StepPage,
+    StepDetailComponent
   ],
   imports: [
     CommonModule,

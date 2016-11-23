@@ -1,5 +1,5 @@
 <div class="offset-xs-1 col-xs-11">
   <div *ngFor="let step of steps">
-      {{ step.step }}
+      <a class="link" (click)="view(step.id)">{{ step.step }}</a>
   </div>
 </div>

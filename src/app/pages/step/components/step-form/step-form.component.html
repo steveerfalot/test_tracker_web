@@ -1,3 +1,11 @@
-<p>
-  step-add works!
-</p>
+<div class="container col-xs-6 offset-xs-1">
+  <h4>Step Form</h4>
+  <form (ngSubmit)="onSubmit(stepForm)" #stepForm="ngForm">
+    <div class="form-group">
+      <input [(ngModel)]="model.id" type="hidden" class="form-control" id="id" name="id" required>
+      <label for="step">Step</label>
+      <input [(ngModel)]="model.step" type="text" class="form-control" id="step" name="step" required>
+    </div>
+    <button class="btn btn-default">Save</button>
+  </form>
+</div>
