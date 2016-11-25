@@ -1,8 +1,8 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { APP_TEST_PROVIDERS } from './../../../../../testing/test-providers';
 import { StepFormComponent } from './step-form.component';
 
 describe('StepFormComponent', () => {
@@ -11,9 +11,13 @@ describe('StepFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StepFormComponent ]
+      imports: [BrowserModule, FormsModule],
+      declarations: [StepFormComponent],
+      providers: [
+        ...APP_TEST_PROVIDERS
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

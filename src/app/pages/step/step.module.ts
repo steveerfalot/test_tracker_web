@@ -1,16 +1,17 @@
 // NG2
-import { CommonModule } from "@angular/common";
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { RouterModule, Routes } from "@angular/router";
-// App
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 import { StepPage } from './step.page';
-import { StepListComponent } from "./components/step-list/step-list.component";
+import { StepListComponent } from './components/step-list/step-list.component';
 import { StepFormComponent } from './components/step-form/step-form.component';
-import { StepService } from "./services/step-service/step.service";
+import { StepService } from './services/step-service/step.service';
 import { StepDetailComponent } from './components/step-detail/step-detail.component';
+// App
 
-const STEP_ROUTES:Routes = [
+const STEP_ROUTES: Routes = [
   {
     path: 'step',
     component: StepPage,
@@ -30,6 +31,7 @@ const STEP_ROUTES:Routes = [
     StepDetailComponent
   ],
   imports: [
+    BrowserModule,
     CommonModule,
     FormsModule,
     RouterModule.forChild(STEP_ROUTES)

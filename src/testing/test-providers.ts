@@ -2,27 +2,35 @@
 import { BaseRequestOptions, Http } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 import { Router, ActivatedRoute } from '@angular/router';
-
-// App
 import { StepService } from './../app/pages/step/services/step-service/step.service';
 
+// App
+
 class MockActivatedRoute {
-  snapshot:any;
+  snapshot: any;
+  params: any;
 
   constructor() {
     this.snapshot = {
       params: {
-        section: 'Test'
+        section: 'Test',
+        subscribe: () => {
+        }
       },
       queryParams: {
         criteria: 'TEST'
+      }
+    };
+
+    this.params = {
+      subscribe: () => {
       }
     };
   }
 }
 
 class MockRouter {
-  parent:any;
+  parent: any;
 
   constructor() {
     this.parent = {};
