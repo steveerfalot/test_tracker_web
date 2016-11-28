@@ -1,4 +1,3 @@
-// NG2
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -8,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ROUTES } from './app.component.routes';
 import { StepModule } from './pages/step/step.module';
 import { LandingModule } from './pages/landing/landing.module';
-// App
+import { ModuleModule } from './pages/module/module.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +18,10 @@ import { LandingModule } from './pages/landing/landing.module';
     FormsModule,
     HttpModule,
     LandingModule,
+    ModuleModule,
     RouterModule.forRoot(ROUTES),
     StepModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
