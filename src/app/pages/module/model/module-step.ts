@@ -1,5 +1,5 @@
-import { Module } from '../../model/module';
-import { Step } from '../../../step/model/step';
+import { Module } from './module';
+import { Step } from '../../step/model/step';
 export class ModuleStep {
   constructor(public id: number,
               public position: number,

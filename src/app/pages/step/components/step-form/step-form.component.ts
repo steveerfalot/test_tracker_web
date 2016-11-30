@@ -26,7 +26,6 @@ export class StepFormComponent implements OnInit {
 
   onSubmit(form) {
     this.stepService.saveStep(form.value).subscribe(savedStep => {
-      console.log('savedStep', savedStep);
       let savedId = savedStep.id;
       this.submitted = true;
       this.router.navigate([savedId]);
