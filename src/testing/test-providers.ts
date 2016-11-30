@@ -2,9 +2,8 @@
 import { BaseRequestOptions, Http } from '@angular/http';
 import { MockBackend } from '@angular/http/testing';
 import { Router, ActivatedRoute } from '@angular/router';
+import { ModuleService } from './../app/pages/module/services/module-service/module.service';
 import { StepService } from './../app/pages/step/services/step-service/step.service';
-
-// App
 
 class MockActivatedRoute {
   snapshot: any;
@@ -54,6 +53,7 @@ export const APP_TEST_HTTP_PROVIDERS = [
 ];
 
 export const APP_TEST_SERVICE_PROVIDERS = [
+  ModuleService,
   StepService,
   { provide: ActivatedRoute, useClass: MockActivatedRoute },
   { provide: Router, useClass: MockRouter },

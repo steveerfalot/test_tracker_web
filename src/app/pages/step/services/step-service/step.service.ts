@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
-import { Response, Http } from '@angular/http';
+import { Http } from '@angular/http';
 import { Step } from '../../model/step';
 
 @Injectable()
@@ -16,7 +16,7 @@ export class StepService {
     return this.http.get(`/api/step/${params.id}`).map(response => response.json());
   }
 
-  fetchSteps(): Observable<Response> {
+  fetchSteps(): Observable<Step[]> {
     return this.http.get('/api/step').map(response => response.json());
   }
 

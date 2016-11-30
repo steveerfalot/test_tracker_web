@@ -1,19 +1,14 @@
 /* tslint:disable:no-unused-variable */
 
-import { TestBed, inject } from '@angular/core/testing';
-import { APP_TEST_PROVIDERS } from '../../../../../testing/test-providers';
+import { inject } from '@angular/core/testing';
 import { ModuleService } from './module.service';
+import { addProviders } from '../../../../../test';
 
 describe('Service: ModuleService', () => {
   let subject;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [
-        ...APP_TEST_PROVIDERS,
-        ModuleService
-      ]
-    });
+    addProviders();
   });
 
   beforeEach(inject([ModuleService], (service: ModuleService) => {

@@ -1,3 +1,11 @@
-<p>
-  module-form works!
-</p>
+<div class="container col-xs-6">
+  <h4 class="center">Module Form</h4>
+  <form (ngSubmit)="onSubmit(moduleForm)" #moduleForm="ngForm">
+    <div class="form-group">
+      <input [(ngModel)]="model.id" type="hidden" class="form-control" id="id" name="id" required>
+      <label for="module">Module</label>
+      <input [(ngModel)]="model.module" type="text" class="form-control" id="module" name="module" required>
+    </div>
+    <button class="btn btn-default">Save</button>
+  </form>
+</div>

@@ -1,3 +1,18 @@
-<p>
-  module-list works!
-</p>
+<div class="col-xs-12">
+  <div class="table-responsive">
+    <table class="table table-striped table-hover table-condensed">
+      <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Steps</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let module of modules" (click)="view(module.id)">
+        <td>{{ module.id }}</td>
+        <td>{{ module.name}}</td>
+        <td>{{ module.steps}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

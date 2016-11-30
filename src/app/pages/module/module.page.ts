@@ -19,7 +19,7 @@ export class ModulePage {
     this.router.navigate(['module']);
   }
 
-  addStep() {
+  addModule() {
     this.router.navigate(['form'], { relativeTo: this.route });
   }
 }
